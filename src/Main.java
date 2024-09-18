@@ -11,7 +11,7 @@ public class Main {
             /*if(dao.adcionarUsuario(new Usuario("mari@gmail.com","maria"))){
                 System.out.println("salvo");
             }*/
-            System.out.println(dao.listarUsuarios());
+            System.out.println(dao.buscarPorEmail("joao@gmail.com"));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
