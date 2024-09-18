@@ -7,12 +7,11 @@ public class Main {
         System.out.println("Hello world!");
 
         try {
-            Connection connection = new ConFactory().getConnection();
-            if (connection != null) {
-                System.out.println("conectado");
-            } else {
-                System.out.println(" nao conectado");
-            }
+            UsuarioDao dao = new UsuarioDao();
+            /*if(dao.adcionarUsuario(new Usuario("mari@gmail.com","maria"))){
+                System.out.println("salvo");
+            }*/
+            System.out.println(dao.listarUsuarios());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
